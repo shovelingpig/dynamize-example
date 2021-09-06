@@ -1,2 +1,1 @@
-# dynamize-example
-Simple Example Source Code for Dynamize
+# Simple Example Code for Dynamize
