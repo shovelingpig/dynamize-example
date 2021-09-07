@@ -1,1 +1,1 @@
-# Simple Example Code for Dynamize
+# Dynamize Example Code
