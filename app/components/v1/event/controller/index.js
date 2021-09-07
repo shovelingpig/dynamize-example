@@ -3,6 +3,7 @@
 const eventService = require('../service');
 
 exports.createEventLog = async function createEventLog(req, res) {
+  console.log('bye');
   const { eventLog } = req.body;
   await eventService.createEventLog(eventLog);
   res.status(201).send('Event Log Created');

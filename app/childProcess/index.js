@@ -2,13 +2,16 @@
 
 const express = require('express');
 
-app = express();
+const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Dynamize Example Server' });
+  res.send('Dynamize Example Server');
 });
 
 require('../routes')(app);
 
-app.listen(process.env.Port);
+const port = process.env.Port || 5000;
+app.listen(port, () => {
+  console.log(`Listening: http://localhost:${port}`);
+});

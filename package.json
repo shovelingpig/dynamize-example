@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./app/index.js"
+    "start": "node app/index.js",
+    "dev": "nodemon app/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,13 @@
   "dependencies": {
     "aws-sdk": "^2.983.0",
     "dotenv": "^10.0.0",
+    "dynamize": "^1.2.2",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "https": "^1.0.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
