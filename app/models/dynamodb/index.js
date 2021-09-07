@@ -1,7 +1,7 @@
 'use strict';
 
-const schema = require('./schema');
 const { dynamize } = require('../../../libs/aws');
+const schema = require('./schema');
 
 schema.forEach((key) => {
   dynamize.model(key.TableName, key);

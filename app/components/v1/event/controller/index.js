@@ -3,13 +3,13 @@
 const eventService = require('../service');
 
 exports.createEventLog = async function createEventLog(req, res) {
-  console.log('bye');
-  const { eventLog } = req.body;
+  const eventLog = req.body;
   await eventService.createEventLog(eventLog);
   res.status(201).send('Event Log Created');
 };
 
 exports.getEventLogs = async function getEventLogs(req, res) {
-  const eventLogs = await eventService.getEventLogs();
+  const { eventId, userId, startDate, endDate } = req.query;
+  const eventLogs = await eventService.getEventLogs(eventId, userId, startDate, endDate);
   res.status(200).send(eventLogs);
 };

@@ -11,7 +11,6 @@ const params = {
   AttributeDefinitions: [
     { AttributeName: 'eventId', AttributeType: 'S' },
     { AttributeName: 'userId', AttributeType: 'S' },
-    { AttributeName: 'point', AttributeType: 'N' },
     { AttributeName: 'date', AttributeType: 'S' },
   ],
   ProvisionedThroughput: {
